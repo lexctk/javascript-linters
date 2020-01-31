@@ -22,6 +22,13 @@ Install [airbnb's base eslint config](https://www.npmjs.com/package/eslint-confi
 npx install-peerdeps --dev eslint-config-airbnb-base
 ```
 
+#### Typescript
+
+Install [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) and copy [eslintrc](typescript/.eslintrc)
+```
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+```
+
 ## Prettier
 
 Install [prettier](https://github.com/prettier/prettier) and copy [prettierrc](.prettierrc) to your project's root.
@@ -40,3 +47,13 @@ npm install stylelint stylelint-config-standard stylelint-scss --save-dev
 npm install stylelint-prettier stylelint-config-prettier --save-dev 
 ```
 
+## CLI helpers
+
+```json
+{
+  "scripts": {
+    "format": "prettier --write \"{src,__{tests,mocks}__}/**/*.{js,scss}\"",
+    "lint": "eslint --quiet \"{src,__{tests,mocks}__}/**/*.js\""
+  }
+}
+```
