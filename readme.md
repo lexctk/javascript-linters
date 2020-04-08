@@ -42,7 +42,7 @@ npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
 Install [stylelint](https://github.com/stylelint/stylelint) with the [standard config](https://github.com/stylelint/stylelint-config-standard) and copy [stylelintrc](.stylelintrc) to your project's root
 
 ```
-npm install stylelint stylelint-config-standard stylelint-scss --save-dev 
+npm install stylelint stylelint-config-standard stylelint-scss stylelint-order --save-dev 
 
 npm install stylelint-prettier stylelint-config-prettier --save-dev 
 ```
@@ -52,7 +52,7 @@ npm install stylelint-prettier stylelint-config-prettier --save-dev
 ```json
 {
   "scripts": {
-    "format": "prettier --write \"{src,__{tests,mocks}__}/**/*.{js,scss}\"",
+    "prettier": "prettier --write \"{src,__{tests,mocks}__}/**/*.{js,scss}\"",
     "lint": "eslint --quiet \"{src,__{tests,mocks}__}/**/*.js\""
   }
 }
